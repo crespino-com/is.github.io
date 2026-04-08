@@ -1,0 +1,46 @@
+body {
+    font-size: 0.9em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+	position: relative;
+}
+
+#navigation {
+	position: absolute;
+	width: 250px;
+}
+
+#content {
+	margin-left: 250px;
+}
+
+a {
+	color: #008fd6;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+}
+
+td, th {
+	padding: 5px;
+	vertical-align: top;
+}
+
+th {
+	text-align: left;
+	color: #008fd6;
+}
+
+h1 {
+	color: #008fd6;
+}
+
+h2 {
+	font-size: 1.2em;
+}
