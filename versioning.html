@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <link href="style/layout.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="JavaScript" src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+	        <div id="navigation">
+		        <ul>
+		                <li>
+                    <a href="index.html">What is Integration Server?</a>
+                
+            </li>
+    <li>
+                    Getting Started
+                
+                    <ul>
+                	                <li>
+				        				            <a href="sessionmanagement.html">Session management</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versioning.html">Versioned calls</a>
+				        				    </li>
+					                <li>
+				        				            <a href="interfaceversioning.html">Interface versioning</a>
+				        				    </li>
+					                <li>
+				        				            <a href="licensing.html">Licensing</a>
+				        				    </li>
+					                <li>
+				        				            <a href="unicode.html">Unicode data</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    <a href="operations.html">Operations</a>
+                
+            </li>
+    <li>
+                    Reference
+                
+                    <ul>
+                	                <li>
+				        				            <a href="datatypes.html">Data types</a>
+				        				    </li>
+					                <li>
+				        				            <a href="requestheaders.html">Request headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="responseheaders.html">Response headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="errors.html">Errors</a>
+				        				    </li>
+					                <li>
+				        				            <a href="scopes.html">Scopes</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    History
+                
+                    <ul>
+                	                <li>
+				        				            <a href="changelog.html">Changelog</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versionlookup.html">Version lookup</a>
+				        				    </li>
+				            </ul>
+            </li>
+		        </ul>
+		    </div>
+	        <div id="content">
+	            <h1>Versioned calls</h1>
+
+<p>
+Some Integration Server calls are versioned for reasons that include adding, removing, or changing data types, and more. For example, version 2 of the GET: /captureProfile call adds a categoryType query parameter.
+</p>
+<p>
+You can tell the version number of a call by reviewing its request URL. For example, version 2 of <code>/captureProfile/{id}</code> is <code>/v2/captureProfile/301YV77_0001EF54P000001</code>, with "v2" meaning version 2.
+</p>
+<p>
+If there is no version indicated by the request URL, you can assume that it is version 1 of the call.
+</p>
+<p>
+When sending calls, it is best to enter a version number, even if you're using version 1 of a call. For example, <code>/v1/captureProfile/301YV77_0001EF54P000001</code> is preferable to <code>/captureProfile/301YV77_0001EF54P000001</code>.
+</p>	        </div>
+	    </div>
+    </body>
+</html>

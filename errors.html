@@ -1,0 +1,1125 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <link href="style/layout.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="JavaScript" src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+	        <div id="navigation">
+		        <ul>
+		                <li>
+                    <a href="index.html">What is Integration Server?</a>
+                
+            </li>
+    <li>
+                    Getting Started
+                
+                    <ul>
+                	                <li>
+				        				            <a href="sessionmanagement.html">Session management</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versioning.html">Versioned calls</a>
+				        				    </li>
+					                <li>
+				        				            <a href="interfaceversioning.html">Interface versioning</a>
+				        				    </li>
+					                <li>
+				        				            <a href="licensing.html">Licensing</a>
+				        				    </li>
+					                <li>
+				        				            <a href="unicode.html">Unicode data</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    <a href="operations.html">Operations</a>
+                
+            </li>
+    <li>
+                    Reference
+                
+                    <ul>
+                	                <li>
+				        				            <a href="datatypes.html">Data types</a>
+				        				    </li>
+					                <li>
+				        				            <a href="requestheaders.html">Request headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="responseheaders.html">Response headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="errors.html">Errors</a>
+				        				    </li>
+					                <li>
+				        				            <a href="scopes.html">Scopes</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    History
+                
+                    <ul>
+                	                <li>
+				        				            <a href="changelog.html">Changelog</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versionlookup.html">Version lookup</a>
+				        				    </li>
+				            </ul>
+            </li>
+		        </ul>
+		    </div>
+	        <div id="content">
+	            <h1>Errors</h1>
+
+<p>
+If a call cannot be successfully completed, the HTTP response message contains three header values indicating the nature of the failure. The <code>Status Code</code> header details the general category of response. The <code>X-IntegrationServer-Error-Code</code> header pvodies an error code providing further information about the type of error that occurred. The <code>X-IntegrationServer-Error-Message</code> header provides the error message about the error that occurred.
+</p>
+
+<p>
+The following table provides a description of each <code>X-IntegrationServer-Error-Code</code>.
+</p>
+
+<table width="100%" height="100%" class="sub">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+					<tr>
+				<td>ACCESS_CONTROL_MARKING_NOT_FOUND_ERROR</td>
+				<td>
+											An access control marking with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>ADD_TO_FOLDER_ERROR</td>
+				<td>
+											An error occurred while attempting to add an item to a folder.
+									</td>
+			</tr>
+					<tr>
+				<td>ANNOTATION_TEMPLATE_NOT_FOUND_ERROR</td>
+				<td>
+											The annotation template with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>APPLICATION_PLAN_CONTEXT_FAIL_ERROR</td>
+				<td>
+											Gathering context of an application plan failed
+									</td>
+			</tr>
+					<tr>
+				<td>APPLICATION_PLAN_NOT_FOUND_ERROR</td>
+				<td>
+											An application plan with the specified ID value could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>APPLICATION_PLAN_TYPE_INVALID_ERROR</td>
+				<td>
+											The specified application plan type is invalid for the current operation
+									</td>
+			</tr>
+					<tr>
+				<td>BAD_REQUEST_ERROR</td>
+				<td>
+											Returned when an a request is incomplete or invalid
+									</td>
+			</tr>
+					<tr>
+				<td>BANNER_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a banner is requested but no banner is found.
+									</td>
+			</tr>
+					<tr>
+				<td>CANNOT_ADD_FOLDER_TO_ITSELF_ERROR</td>
+				<td>
+											An operation occurred which attempted to add a folder to itself.
+									</td>
+			</tr>
+					<tr>
+				<td>CAPTURE_PROFILE_NOT_FOUND_ERROR</td>
+				<td>
+											A capture profile with the specified ID value could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>CAPTURE_SOURCE_PROFILE_NOT_FOUND_ERROR</td>
+				<td>
+											A capture source profile with the specified ID does not exist.
+									</td>
+			</tr>
+					<tr>
+				<td>CLIENT_ENUM_TRANSFORM_ERROR</td>
+				<td>
+											A generic error.  The user provided an invalid enumeration constant to Integration Server.
+									</td>
+			</tr>
+					<tr>
+				<td>CLIENT_VERSION_INVALID</td>
+				<td>
+											Returned when the client version is not compatible with the server version.
+									</td>
+			</tr>
+					<tr>
+				<td>COMPLETE_TASK_PASSWORD_ERROR</td>
+				<td>
+											When completing a task, the password provided by the user was incorrect.
+									</td>
+			</tr>
+					<tr>
+				<td>CONFLICTING_ITEM_ERROR</td>
+				<td>
+											Returned when a conflicting item already exists
+									</td>
+			</tr>
+					<tr>
+				<td>CONFLICT_ERROR</td>
+				<td>
+											Returned when the request conflicts with an existing object or rule
+									</td>
+			</tr>
+					<tr>
+				<td>DATABASE_ERROR</td>
+				<td>
+											A generic error returned by the server when an error occurs in the database.
+									</td>
+			</tr>
+					<tr>
+				<td>DEPARTMENT_NAME_INVALID_ERROR</td>
+				<td>
+											The name provided for this department is invalid
+									</td>
+			</tr>
+					<tr>
+				<td>DEPARTMENT_NOT_FOUND_ERROR</td>
+				<td>
+											A department with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>DEPARTMENT_PREFIX_INVALID_ERROR</td>
+				<td>
+											The prefix provided for this department is invalid
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_FAILED_TO_SIGN_VERSION</td>
+				<td>
+											Returned when a user attempts to sign an invalid document version.
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_FAILED_TO_VOID_DIGITAL_SIGNATURE</td>
+				<td>
+											Returned when user does not have privileges to void a signature.
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_INVALID_PASSWORD</td>
+				<td>
+											Returned when a digital signature password was incorrect.
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a digital signature was not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_PASSWORD_DECRYPT_FAILED</td>
+				<td>
+											Returned when the password for a digital signature could not be decrypted.
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_USER_KEY_NOT_FOUND</td>
+				<td>
+											Returned when the user's key-pair id was not found.
+									</td>
+			</tr>
+					<tr>
+				<td>DIGITAL_SIGNATURE_VERSION_HASH_FAILED</td>
+				<td>
+											Returned when a hash could not be generated while signing a document.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_ALREADY_CHECKED_OUT_ERROR</td>
+				<td>
+											Returned when a user tries to complete a task that is associated with a document that they have checked out.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_CHECKED_OUT_BY_OTHER_USER_ERROR</td>
+				<td>
+											Returned when a user tries to complete a task that is associated with a document that is checked out by another user.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_CONVERSION_FAILURE</td>
+				<td>
+											Returned when the entire document failed to convert.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_COPY_TO_SELF_ERROR</td>
+				<td>
+											Attempt to copy a document to the same name and location as itself.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_EXPORT_ARCHIVE_FORMAT_INVALID</td>
+				<td>
+											The specified export archive format is not valid.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_EXPORT_CONVERSION_ERROR</td>
+				<td>
+											Returned when an export fails due to a conversion error.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_EXPORT_CONVERSION_FORMAT_INVALID</td>
+				<td>
+											The specified export conversion format is not valid.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_EXPORT_VERSION_NUMBER_NOT_SUPPORTED</td>
+				<td>
+											Returned when a version number is specified for more than one document.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_HAS_BEEN_DELETED_ERROR</td>
+				<td>
+											The specified document has been deleted.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_NOT_CHECKED_OUT_ERROR</td>
+				<td>
+											The requested document operation requires the user to first check out the document.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_NOT_FOUND_ERROR</td>
+				<td>
+											The specified document could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_NOT_IN_VERSION_CONTROL</td>
+				<td>
+											Returned when document is not in version control
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_TYPE_LIST_NOT_FOUND_ERROR</td>
+				<td>
+											The specified document type list ID is invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_TYPE_NOT_FOUND_ERROR</td>
+				<td>
+											The specified document type ID is invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_VERSION_ALREADY_IN_VERSION_CONTROL</td>
+				<td>
+											Returned when the document is already in version control.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_VERSION_CHECKED_OUT</td>
+				<td>
+											Returned when a document is already checked out.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_VERSION_NUMBER_INVALID</td>
+				<td>
+											Returned when an invalid version number is provided.
+									</td>
+			</tr>
+					<tr>
+				<td>DOCUMENT_VERSION_REMOVE_HISTORY_FOR_SIGNED_DOCUMENT</td>
+				<td>
+											Returned when removing document history when there is a signed version.
+									</td>
+			</tr>
+					<tr>
+				<td>DRAWER_NOT_FOUND_ERROR</td>
+				<td>
+											A drawer with the specified unique ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>EMPTY_GROUP_ID_ERROR</td>
+				<td>
+											A group id was not provided as a part of the URL
+									</td>
+			</tr>
+					<tr>
+				<td>EMPTY_ID_ERROR</td>
+				<td>
+											This error is returned when attempting to complete a task when the provided task ID is empty.
+									</td>
+			</tr>
+					<tr>
+				<td>FILE_PLAN_NOT_FOUND_ERROR</td>
+				<td>
+											A file plan with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>FOLDER_INVALID_TYPE_ERROR</td>
+				<td>
+											The type provided for this folder is invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>FOLDER_MARKED_FOR_DELETION_ERROR</td>
+				<td>
+											This error code is returned when the user tries to retrieve a folder already marked for deletion.
+									</td>
+			</tr>
+					<tr>
+				<td>FOLDER_NOT_FOUND_ERROR</td>
+				<td>
+											A folder with the specified ID or path could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>FOLDER_TYPE_NOT_FOUND_ERROR</td>
+				<td>
+											Returned with the folder type could not be found
+									</td>
+			</tr>
+					<tr>
+				<td>FORBIDDEN_ERROR</td>
+				<td>
+											Returned when the user is forbidden to perform an action
+									</td>
+			</tr>
+					<tr>
+				<td>GLOBAL_MANAGER_MODIFICATION_NOT_ALLOWED</td>
+				<td>
+											Cannot modify a global manager.
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ACCESS_SECURITY_GROUP_PRIVS</td>
+				<td>
+											Returned when attempting to access group privileges for a security group (such as agents)
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ADD_AND_REMOVE_USER_ERROR</td>
+				<td>
+											Returned when a user appears in both the add and remove lists
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ADD_CURRENT_USER_ERROR</td>
+				<td>
+											Returned when attempting to add the current user to a user group
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ADD_DELETED_USER_ERROR</td>
+				<td>
+											Returned when attempting to add a deleted user to a user group
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ADD_ERROR</td>
+				<td>
+											Returned when the user group could not be added
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ADD_OWNER_USER_ERROR</td>
+				<td>
+											Returned when attempting to add the owner user to a user group
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_ADD_SYSTEM_USER_ERROR</td>
+				<td>
+											Returned when attempting to add a system user to a user group
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_DEPT_ID_EMPTY_ERROR</td>
+				<td>
+											Returned when the department ID is empty
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_NAME_EMPTY_ERROR</td>
+				<td>
+											Returned when the group name is empty
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_NAME_INVALID_ERROR</td>
+				<td>
+											Returned when the group name is invalid
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when the user group could not be found
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_NOT_REFERENCEABLE_BY_PRIV_TARGET</td>
+				<td>
+											A privilege cannot be set because the group is not referenceable by the resource.
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_REMOVE_CURRENT_USER_ERROR</td>
+				<td>
+											Returned when attempting to remove the current user from a user group
+									</td>
+			</tr>
+					<tr>
+				<td>GROUP_UPDATE_ERROR</td>
+				<td>
+											Returned when a user group could not be updated
+									</td>
+			</tr>
+					<tr>
+				<td>INSTANCE_NAME_CONFLICT</td>
+				<td>
+											Returned when there is a conflicting instance name.
+									</td>
+			</tr>
+					<tr>
+				<td>INSUFFICIENT_PRIVILEGES_ERROR</td>
+				<td>
+											A generic error.  The user does not have privileges to perform the requested action.
+									</td>
+			</tr>
+					<tr>
+				<td>INTERNAL_ERROR</td>
+				<td>
+											Returned when an unexpected condition prevented the fulfillment of the request
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_CAPTURE_PROFILE_ERROR</td>
+				<td>
+											Returned when category of capture profile id is invalid for capture group
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_CAPTURE_SOURCE_TYPE_ERROR</td>
+				<td>
+											The specified capture source type does not exist.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_DOCUMENT_VERSION_NUMBER_ERROR</td>
+				<td>
+											Returned from calls that accept a document version number from the user.  This code is returned when the version number given by the user cannot be parsed.  (error.document.invalid.version.number=Invalid version number: {0})
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_EMAIL_METADATA_ID_ERROR</td>
+				<td>
+											The capture group page email metadata ID was invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_FOLDER_SEARCH_CRITERIA_ERROR</td>
+				<td>
+											Missing or invalid folder search criteria for the search for folders by name call.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_GROUP_ERROR</td>
+				<td>
+											A missing or invalid group was referenced.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_HOLD_REASON_ERROR</td>
+				<td>
+											The specified hold reason item is invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_MOVE_DESTINATION_ERROR</td>
+				<td>
+											An invalid destination was specified when moving items.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_NAME_ERROR</td>
+				<td>
+											The name is invalid when renaming a document or folder.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_PRIVILEGE_NAME_ERROR</td>
+				<td>
+											A null or invalid privilege name was given in a privilege set.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_PRIVILEGE_SET_ERROR</td>
+				<td>
+											The data in a given privilege set is invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_PRIVILEGE_SET_TYPE_ERROR</td>
+				<td>
+											The privilege set type is invalid
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_PRIVILEGE_VALUE_ERROR</td>
+				<td>
+											A null or invalid privilege value was given.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_TASK_STATE_ERROR</td>
+				<td>
+											The task could not be completed or returned because it is currently in a state that does not permit these operations.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_VERSION_ERROR</td>
+				<td>
+											Returned when the user is using an incompatible version of a call.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_VIEW_CATEGORY_ERROR</td>
+				<td>
+											The specified view classifier or category is invalid for the view call.
+									</td>
+			</tr>
+					<tr>
+				<td>INVALID_WORKFLOW_QUEUE_ITEM_STATE_ERROR</td>
+				<td>
+											When setting a workflow item state, the specified state was either missing or could not be parsed.
+									</td>
+			</tr>
+					<tr>
+				<td>ITEM_NOT_AVAILABLE_IN_WORKFLOW_QUEUE_ERROR</td>
+				<td>
+											Returned from calls to set a workflow item state when the workflow item could not be found in the specified workflow queue.
+									</td>
+			</tr>
+					<tr>
+				<td>LICENSE_ERROR</td>
+				<td>
+											An error validating the license has occurred.
+									</td>
+			</tr>
+					<tr>
+				<td>LIST_ITEM_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a list item does not exist.
+									</td>
+			</tr>
+					<tr>
+				<td>LOGIN_FAILED_ERROR</td>
+				<td>
+											An error has occurred while attempting to logon.
+									</td>
+			</tr>
+					<tr>
+				<td>LOGIN_PROFILE_NOT_FOUND_ERROR</td>
+				<td>
+											The specified login profile is invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>MESSAGE_CALL_FAILED_ERROR</td>
+				<td>
+											A generic error message indicating that some failure occurred.  The error message should further indicate the nature of the error.
+									</td>
+			</tr>
+					<tr>
+				<td>MISSING_HOLD_REASON_LIST_ERROR</td>
+				<td>
+											The user tried to set an item on hold with a reason ID, but the workflow queue hold reason list has not been specified.
+									</td>
+			</tr>
+					<tr>
+				<td>MISSING_OR_INVALID_DRAWER_CONTENT_ITEMS_ERROR</td>
+				<td>
+											The drawer content items collection was missing or invalid when attempting to move instances to a drawer.
+									</td>
+			</tr>
+					<tr>
+				<td>MISSING_OR_INVALID_FOLDER_CONTENT_ITEMS_ERROR</td>
+				<td>
+											When moving items from one folder to another, items collection was missing or invalid.  Not sure how this is different from MISSING_OR_INVALID_INSTANCE_TYPE_ERROR
+									</td>
+			</tr>
+					<tr>
+				<td>MISSING_OR_INVALID_INSTANCE_TYPE_ERROR</td>
+				<td>
+											An instance type required by the call was missing or invalid.  This can be returned by the calls to move instances if the specified instance types are missing or are invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a the information or object requested could not be found
+									</td>
+			</tr>
+					<tr>
+				<td>NOT_LATEST_VERSION_NUMBER_ERROR</td>
+				<td>
+											The call failed because the version number is not the latest version number in your ImageNow system. In completing a task, this assures ImageNow Server that tasks are not completed with respect to dated documents.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_ALREADY_EXISTS</td>
+				<td>
+											Returned when you already have an out of office instance.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_CIRCULAR_DELEGATION</td>
+				<td>
+											Returned when you specify a delegate that has you as their delegate.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_DELEGATE_NOT_FOUND</td>
+				<td>
+											Returned when the specifed delegate user is not found.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_INSTANCE_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when the specified out of office instance does not exist.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_INVALID_DATE</td>
+				<td>
+											The date specified was invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_INVALID_USER</td>
+				<td>
+											Returned when the specified out of office instance does not belong to the current user.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_REASON_CATEGORY_INVALID</td>
+				<td>
+											Returned when the specified reason is not an out of office reason.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_REASON_NOT_FOUND</td>
+				<td>
+											Returned when the out of office reason is not found.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_REASON_NOT_SET</td>
+				<td>
+											Returned when the reason ID is not set.
+									</td>
+			</tr>
+					<tr>
+				<td>OUT_OF_OFFICE_SELF_DELEGATION</td>
+				<td>
+											Returned when you attepmt to specify yourself as your out of office delegate.
+									</td>
+			</tr>
+					<tr>
+				<td>PAGE_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a failure occurs trying to retrieve a document page.  (error.page.logob.not.found=Logical object not found. Logob ID: {0})
+									</td>
+			</tr>
+					<tr>
+				<td>PAGE_RENDER_FAILED</td>
+				<td>
+											Page rendering failed.
+									</td>
+			</tr>
+					<tr>
+				<td>PATCH_OPERATION_NOT_SUPPORTED</td>
+				<td>
+											Returned when invalid patch operation is supplied to a patch call.
+									</td>
+			</tr>
+					<tr>
+				<td>PATCH_PATH_NOT_SUPPORTED</td>
+				<td>
+											Returned when path argument is invalid for the object specified.
+									</td>
+			</tr>
+					<tr>
+				<td>POOLED_USER_MODIFY_NOT_ALLOWED</td>
+				<td>
+											Cannot modify a pooled user.
+									</td>
+			</tr>
+					<tr>
+				<td>POSITION_NOT_PROVIDED_ERROR</td>
+				<td>
+											Position not provided for connection
+									</td>
+			</tr>
+					<tr>
+				<td>PROPERTY_NOT_FOUND_ERROR</td>
+				<td>
+											A custom property with the specified unique ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>RECORD_CATEGORY_NOT_FOUND_ERROR</td>
+				<td>
+											A record category with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>RECORD_CONNECTION_TYPE_NOT_FOUND</td>
+				<td>
+											A connection type with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>RECORD_FOLDER_NOT_FOUND_ERROR</td>
+				<td>
+											A record folder with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>RECORD_HAS_BEEN_DELETED_ERROR</td>
+				<td>
+											The specified record has already been deleted.
+									</td>
+			</tr>
+					<tr>
+				<td>RECORD_NOT_FOUND_ERROR</td>
+				<td>
+											A record with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>RECORD_TYPE_NOT_FOUND_ERROR</td>
+				<td>
+											A record type with the specified ID could not be found.
+									</td>
+			</tr>
+					<tr>
+				<td>REQUIRED_DATA_INVALID_ERROR</td>
+				<td>
+											A generic error.  One or more pieces of required data were invalid.
+									</td>
+			</tr>
+					<tr>
+				<td>REQUIRED_DATA_LENGTH_ERROR</td>
+				<td>
+											Returned when the length of a field is too long
+									</td>
+			</tr>
+					<tr>
+				<td>REQUIRED_DATA_NOT_SET_ERROR</td>
+				<td>
+											Generic error.  One or more piece of required data for the call was missing.
+									</td>
+			</tr>
+					<tr>
+				<td>RESOURCE_NOT_FOUND_ERROR</td>
+				<td>
+											Not sure if this is misnamed, but it is returned when an invalid reason ID is provided when completing a task.
+									</td>
+			</tr>
+					<tr>
+				<td>RETENTION_ITEM_HOLD_ERROR</td>
+				<td>
+											The specified item is in a retention hold.
+									</td>
+			</tr>
+					<tr>
+				<td>RETENTION_ITEM_PROCESSING_ERROR</td>
+				<td>
+											The specified item is being processed by a retention policy.
+									</td>
+			</tr>
+					<tr>
+				<td>RETENTION_ITEM_PROCESSING_SET_ERROR</td>
+				<td>
+											The specified item is being processed in a set.
+									</td>
+			</tr>
+					<tr>
+				<td>RETENTION_ITEM_PROTECTED_ERROR</td>
+				<td>
+											The specified item is in a retention protected state.
+									</td>
+			</tr>
+					<tr>
+				<td>SERVER_ENUM_TRANSFORM_ERROR</td>
+				<td>
+											A generic error.  An invalid enumeration constant was returned by the ImageNow server to Integration server.  This is an internal error.
+									</td>
+			</tr>
+					<tr>
+				<td>SET_WORKFLOW_ITEM_STATE_ERROR</td>
+				<td>
+											A generic error setting the state of a workflow item.
+									</td>
+			</tr>
+					<tr>
+				<td>SUBOBJECT_ADD_WRONG_VERSION_ERROR</td>
+				<td>
+											There is a mismatch between sub object and document versions
+									</td>
+			</tr>
+					<tr>
+				<td>SYSTEM_DRAWER_ACCESS_NOT_ALLOWED</td>
+				<td>
+											Cannot access a system drawer.
+									</td>
+			</tr>
+					<tr>
+				<td>SYSTEM_USER_ACCESS_NOT_ALLOWED</td>
+				<td>
+											Cannot access a system user.
+									</td>
+			</tr>
+					<tr>
+				<td>SYSTEM_USER_MODIFY_NOT_ALLOWED</td>
+				<td>
+											Cannot modify a system user.
+									</td>
+			</tr>
+					<tr>
+				<td>TASK_LOCKED_ERROR</td>
+				<td>
+											The user attempted to change the state of a task that is locked (perhaps because it is being worked on by another user).
+									</td>
+			</tr>
+					<tr>
+				<td>TASK_NOT_FOUND_ERROR</td>
+				<td>
+											A task with the passed ID could not be found. (error.task.task.not.found=Task not found. Task ID: {0})
+									</td>
+			</tr>
+					<tr>
+				<td>UNAUTHORIZED_ERROR</td>
+				<td>
+											Returned when a user is unauthorized
+									</td>
+			</tr>
+					<tr>
+				<td>UNKNOWN_ERROR</td>
+				<td>
+											An unknown error has occurred.
+									</td>
+			</tr>
+					<tr>
+				<td>UNSUPPORTED_FILE_TYPE</td>
+				<td>
+											Rendering is not supported for the page's file type.
+									</td>
+			</tr>
+					<tr>
+				<td>USER_ACCESS_SELF_ERROR</td>
+				<td>
+											Cannot get or modify yourself
+									</td>
+			</tr>
+					<tr>
+				<td>USER_ACCESS_SYSTEM_USER_PRIVS</td>
+				<td>
+											Returned when attempting to access user privileges for a system user (such as agents)
+									</td>
+			</tr>
+					<tr>
+				<td>USER_ADD_AND_REMOVE_GROUP_ERROR</td>
+				<td>
+											Returned when the group appears in the to add and to remove lists
+									</td>
+			</tr>
+					<tr>
+				<td>USER_ADD_ERROR</td>
+				<td>
+											Returned when the user could not be added
+									</td>
+			</tr>
+					<tr>
+				<td>USER_ADD_GROUP_ERROR</td>
+				<td>
+											Returned when the group could not be added
+									</td>
+			</tr>
+					<tr>
+				<td>USER_DELETED_ERROR</td>
+				<td>
+											Returned when the user is deleted
+									</td>
+			</tr>
+					<tr>
+				<td>USER_DELETE_SELF_ERROR</td>
+				<td>
+											Returned when attempting to delete yourself
+									</td>
+			</tr>
+					<tr>
+				<td>USER_ID_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a user with the given ID could not be found
+									</td>
+			</tr>
+					<tr>
+				<td>USER_MODIFY_SELF_ERROR</td>
+				<td>
+											Returned when a user attempts to modify itself
+									</td>
+			</tr>
+					<tr>
+				<td>USER_NAME_FIELD_REQUIRED_ERROR</td>
+				<td>
+											Returned when a username field is missing
+									</td>
+			</tr>
+					<tr>
+				<td>USER_NAME_INVALID_ERROR</td>
+				<td>
+											Returned when the user name is invalid
+									</td>
+			</tr>
+					<tr>
+				<td>USER_NAME_PARAMETER_REQUIRED_ERROR</td>
+				<td>
+											Returned when an invalid parameter is used trying to retrieve a user's groups
+									</td>
+			</tr>
+					<tr>
+				<td>USER_NOT_ASSIGNED_TO_TASK_ERROR</td>
+				<td>
+											The user attempting to complete a task is not the user to whom the task is assigned.
+									</td>
+			</tr>
+					<tr>
+				<td>USER_NOT_FOUND_ERROR</td>
+				<td>
+											Returned when a failure occurs trying to retrieve a user
+									</td>
+			</tr>
+					<tr>
+				<td>USER_POOLED_GROUP_ERROR</td>
+				<td>
+											Returned when attempting to add or remove a user to or from a pooled group
+									</td>
+			</tr>
+					<tr>
+				<td>USER_PROMOTION_ERROR</td>
+				<td>
+											The specified user cannot be promoted
+									</td>
+			</tr>
+					<tr>
+				<td>USER_REMOVE_GROUP_ERROR</td>
+				<td>
+											Returned when the group could not be removed
+									</td>
+			</tr>
+					<tr>
+				<td>USER_SECURITY_GROUP_ERROR</td>
+				<td>
+											Returned when attempting to add or remove a user to or from a security group
+									</td>
+			</tr>
+					<tr>
+				<td>USER_SYSTEM_GROUP_ERROR</td>
+				<td>
+											Returned when attempting to add or remove a user to or from a system group
+									</td>
+			</tr>
+					<tr>
+				<td>USER_UPDATE_ERROR</td>
+				<td>
+											Returned when the user could not be updated
+									</td>
+			</tr>
+					<tr>
+				<td>VERSION_IS_PRIVATE_ERROR</td>
+				<td>
+											The specified version of the document is private.
+									</td>
+			</tr>
+					<tr>
+				<td>VERSION_NOT_FOUND_ERROR</td>
+				<td>
+											The specified version of the document was not found.
+									</td>
+			</tr>
+					<tr>
+				<td>VIEW_NOT_FOUND_ERROR</td>
+				<td>
+											Returned with the view could not be found
+									</td>
+			</tr>
+					<tr>
+				<td>WORKFLOW_ITEM_NOT_FOUND_ERROR</td>
+				<td>
+											Returned with the workflow item could not be found
+									</td>
+			</tr>
+					<tr>
+				<td>WORKFLOW_ITEM_STATE_ALREADY_WORKING_ERROR</td>
+				<td>
+											This error code is returned when the user tries to set a workflow item state to 'Working' when the state of the item is already 'Working'.
+									</td>
+			</tr>
+					<tr>
+				<td>WORKFLOW_QUEUE_ITEM_LIST_INVALID</td>
+				<td>
+											No queue items in the list had both queue and item IDs.
+									</td>
+			</tr>
+					<tr>
+				<td>WORKFLOW_QUEUE_ITEM_LIST_SIZE_EXCEEDED</td>
+				<td>
+											The number of queue item in the list exceeded the limit.
+									</td>
+			</tr>
+					<tr>
+				<td>WORKFLOW_QUEUE_NOT_FOUND_ERROR</td>
+				<td>
+											Returned with the workflow queue could not be found
+									</td>
+			</tr>
+			</tbody>
+</table>	        </div>
+	    </div>
+    </body>
+</html>

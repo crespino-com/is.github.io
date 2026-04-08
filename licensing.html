@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <link href="style/layout.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="JavaScript" src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+	        <div id="navigation">
+		        <ul>
+		                <li>
+                    <a href="index.html">What is Integration Server?</a>
+                
+            </li>
+    <li>
+                    Getting Started
+                
+                    <ul>
+                	                <li>
+				        				            <a href="sessionmanagement.html">Session management</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versioning.html">Versioned calls</a>
+				        				    </li>
+					                <li>
+				        				            <a href="interfaceversioning.html">Interface versioning</a>
+				        				    </li>
+					                <li>
+				        				            <a href="licensing.html">Licensing</a>
+				        				    </li>
+					                <li>
+				        				            <a href="unicode.html">Unicode data</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    <a href="operations.html">Operations</a>
+                
+            </li>
+    <li>
+                    Reference
+                
+                    <ul>
+                	                <li>
+				        				            <a href="datatypes.html">Data types</a>
+				        				    </li>
+					                <li>
+				        				            <a href="requestheaders.html">Request headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="responseheaders.html">Response headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="errors.html">Errors</a>
+				        				    </li>
+					                <li>
+				        				            <a href="scopes.html">Scopes</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    History
+                
+                    <ul>
+                	                <li>
+				        				            <a href="changelog.html">Changelog</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versionlookup.html">Version lookup</a>
+				        				    </li>
+				            </ul>
+            </li>
+		        </ul>
+		    </div>
+	        <div id="content">
+	            <h1>Licensing</h1>
+
+<p>
+This topic describes the requirements for Integration Server licensing. Integration Server uses a transaction package license, which counts the number of transactions against Integration Server. For general information about each of the license types, refer to "About licensing in ImageNow" in the Managing ImageNow>Licensing section of Administrator Help.
+</p>
+<p>
+ImageNow Server tracks each call that is made to Integration Server, which is charged against a transaction package license. Transaction package licensing is controlled from ImageNow Server. Transactions licenses are based on counting the number of transactions within ImageNow and decrementing this number over a period of time. After users perform all of the transactions in a specified period, no more transactions can be done until the period expires. You can purchase overdraft licensing protection for Integration Server transaction licenses.
+</p>
+
+<h2>Licensing for other applications</h2>
+<p>
+ImageNow applications that use Integration Server, such as ImageNow Interact for Microsoft Outlook, can use either the concurrent use or per seat licensing model. Per seat licensing is a node-locked license that is based on the number of computers on which you install the software. A separate transaction package license is not required for calls that are used by a Developer Network partner's product that uses Integration Server.
+</p>
+
+<h2>Transaction Licenses Overdraft Report</h2>
+<p>
+If you purchase overdraft licensing protection for Integration Server transaction licenses, you must generate a quarterly report to send to Perceptive Software. You may also use this report or the ImageNow Server Administrator utility to check the usage status of your overdrafts.
+</p>
+
+<h2>Free calls</h2>
+<p>
+The following Integration Server calls are not charged against a transaction package licensing model.
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Call</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+                    <tr>
+                <td>POST:&nbsp;/v1/authorization/perceptivetoken/introspect</td>
+                <td>Validate and inquire about the current state of a Perceptive access token. The Perceptive access token to be introspected must be passed in the 'token' parameter of the request body. Requires an additional Perceptive access token for authentication.<br/>For more information regarding authorization and introspection requests and responses, refer to Perceptive Content Help > Set up Content system > Manage user authentication > What is Perceptive Content introspection?</td>
+            </tr>
+                    <tr>
+                <td>POST:&nbsp;/v1/authorization/perceptivetoken/token</td>
+                <td>Issues Perceptive access tokens for use with supported API endpoints.</td>
+            </tr>
+                    <tr>
+                <td>DELETE:&nbsp;/v1/connection/</td>
+                <td>Disconnect current connection from the server.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/connection/</td>
+                <td>This API call verifies the connection status of Integration Server to ImageNow Server. If a connection to ImageNow Server does not already exist, a new connection is made. Integration Server uses the connectionStatus type to provide the product version for the connection.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/licenseGroup</td>
+                <td>Get the License Group of this ImageNow Server.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/serverInfo</td>
+                <td>Gets all server information.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/sso/callback/{profileName}</td>
+                <td>A redirection endpoint for the OpenID Connect Authorization Code Flow.</td>
+            </tr>
+                    <tr>
+                <td>POST:&nbsp;/v1/sso/callback/{profileName}</td>
+                <td>A redirection endpoint for the OpenID Connect Authorization Code Flow.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/sso/login</td>
+                <td>Initiates a single sign-on (SSO) flow based on the SSO configuration using the default login profile.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/sso/login/{profileName}</td>
+                <td>Initiates a single sign-on (SSO) flow based on the SSO configuration using the specified login profile.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/sso/token/login/{profileName}</td>
+                <td>Establish a Perceptive Content session using Bearer authentication by supplying a bearer token in an Authorization header. A valid bearer token login profile name must be provided in the endpoint path.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/status</td>
+                <td>Retrieve state of integration server and its dependent services.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v1/uniqueId</td>
+                <td>Returns a set of server generated unique IDs.</td>
+            </tr>
+                    <tr>
+                <td>POST:&nbsp;/v2/captureGroup/</td>
+                <td>Creates a capture group that can be used to capture a group of pages into one or more documents</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v2/connection/</td>
+                <td>This API call verifies the connection status of Integration Server to ImageNow Server. If a connection to ImageNow Server does not already exist, a new connection is made. Integration Server uses the connectionStatus type to provide the product version, user ID, and user name for the connection.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v2/serverInfo</td>
+                <td>Gets version information.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v2/user</td>
+                <td>Gets a list of all users.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v2/user/{id}/privilege</td>
+                <td>Gets the privileges for a user</td>
+            </tr>
+                    <tr>
+                <td>PUT:&nbsp;/v2/user/{id}/privilege</td>
+                <td>Sets the privileges for a user</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v2/userGroup/{id}</td>
+                <td>Retrieves an existing user group</td>
+            </tr>
+                    <tr>
+                <td>PUT:&nbsp;/v2/userGroup/{id}</td>
+                <td>Updates an existing user group.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v2/userGroup/{id}/privilege</td>
+                <td>This API call requests detailed information about the privileges for the user group that matches the given ID. Integration Server structures the response using the privilegeSet type, which provides the unique ID and type of each privilege set, the name of each privilege within a set, as well as whether the  privilege for that user group is GRANTED, DENIED, or UNSET.  You can use query parameters to return specific privilege sets for a user group, such as global privileges and document type privileges. You can enter multiple query parameters on the same call. If a query parameter is repeated, Integration Server ignores the extra query parameters. If you don't provide any query parameters, Integration Server returns an empty structure.</td>
+            </tr>
+                    <tr>
+                <td>PUT:&nbsp;/v2/userGroup/{id}/privilege</td>
+                <td>This API call modifies the privileges for an existing user group. Integration Server structures the request using the privilegeSet type, which provides the unique ID and type of each privilege set, the name of each privilege within a set, as well as whether the privilege for that user group is GRANTED, DENIED, UNSET, or IGNORE. For the call to succeed, the request must contain all of the privileges for the given privilege type, such as FOLDER_TYPE in the example below.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v3/user</td>
+                <td>Gets users matching a supplied search term.</td>
+            </tr>
+                    <tr>
+                <td>GET:&nbsp;/v4/user</td>
+                <td>Gets users matching a supplied search term.</td>
+            </tr>
+            </tbody>
+</table>	        </div>
+	    </div>
+    </body>
+</html>

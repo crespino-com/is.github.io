@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <link href="style/layout.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="JavaScript" src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+	        <div id="navigation">
+		        <ul>
+		                <li>
+                    <a href="index.html">What is Integration Server?</a>
+                
+            </li>
+    <li>
+                    Getting Started
+                
+                    <ul>
+                	                <li>
+				        				            <a href="sessionmanagement.html">Session management</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versioning.html">Versioned calls</a>
+				        				    </li>
+					                <li>
+				        				            <a href="interfaceversioning.html">Interface versioning</a>
+				        				    </li>
+					                <li>
+				        				            <a href="licensing.html">Licensing</a>
+				        				    </li>
+					                <li>
+				        				            <a href="unicode.html">Unicode data</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    <a href="operations.html">Operations</a>
+                
+            </li>
+    <li>
+                    Reference
+                
+                    <ul>
+                	                <li>
+				        				            <a href="datatypes.html">Data types</a>
+				        				    </li>
+					                <li>
+				        				            <a href="requestheaders.html">Request headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="responseheaders.html">Response headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="errors.html">Errors</a>
+				        				    </li>
+					                <li>
+				        				            <a href="scopes.html">Scopes</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    History
+                
+                    <ul>
+                	                <li>
+				        				            <a href="changelog.html">Changelog</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versionlookup.html">Version lookup</a>
+				        				    </li>
+				            </ul>
+            </li>
+		        </ul>
+		    </div>
+	        <div id="content">
+	            <h1>Session management</h1>
+
+<p>
+Session management is one of the most important aspects of developing a client that calls into Integration Server. Failing to re-use sessions properly will result in Perceptive Content Server having to create a brand new session for every call which will severely impact performance on both the server and database. On the other side, over-use of a single session between multiple accounts may limit the throughput of operations due to Integration Server only handling one call at a time per session. Finally, some aspects of Perceptive Content Server are based on session (such as Workflow locks) so failing to use sessions properly may prevent proper use of that functionality.
+</p>
+
+<h2>Initiating a session</h2>
+<p>
+A session is created any time an existing, valid session is not provided to an Integration Server request. In order to initiate a new session, user credentials must be provided in some way. They can be passed over via the <code>Authorization</code> header, the tandem of <code>X-IntegrationServer-Username</code>/<code>X-IntegrationServer-Password</code> headers, or through an SSO token (depends on the SSO provider). When a new session is initiated, a session hash will be returned via the <code>X-IntegrationServer-Session-Hash</code> header. Although a session may be established by making a <code>GET /connection</code> request, any call in Integration Server will establish a connection if appropriate credentials are provided.
+</p>
+
+<h2>Maintaining a session</h2>
+<p>
+To use a previously established session for a request, the session hash for that session should be provided to the <code>X-IntegrationServer-Session-Hash</code> request header. The <code>X-IntegrationServer-Session-Hash</code> response header will always contain the session hash that was used to process the call. By default, a session will automatically expire if it has not been used in the past 60 minutes (this is configurable within Perceptive Content Server). Whenever a session is no longer needed, it should be deleted by making a <code>DELETE /connection</code> request.
+</p>
+
+<h2>Session issues</h2>
+<p>
+If a session hash is provided but the session is invalid (never existed or has expired), there are two possible responses based on other headers. If credentials are provided in addition to the session hash, a new session will automatically be generated, the call will be processed as normal, and the new session hash will be returned. If credentials are not provided, a <code>Status Code</code> of 401, an <code>X-IntegrationServer-Error-Code</code> of UNAUTHORIZED_ERROR, and an <code>X-IntegrationServer-Error-Message</code> prompting for credentials will be returned. When maintaining sessions, invalid session hashes should be cleaned up immediately so that they are not repeatedly used (repeatedly using an invalid session hash will repeatedly create new sessions automatically if credentials are provided).
+</p>
+
+<h2>Best practices</h2>
+<p>
+    <ul>
+        <li>Maintain session hash for any unique session</li>
+        <li>Always compare session hash on response to session hash on request for changes</li>
+        <li>Close session as soon as it is no longer needed</li>
+    </ul>
+</p>	        </div>
+	    </div>
+    </body>
+</html>

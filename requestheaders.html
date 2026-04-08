@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <link href="style/layout.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" language="JavaScript" src="js/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+	        <div id="navigation">
+		        <ul>
+		                <li>
+                    <a href="index.html">What is Integration Server?</a>
+                
+            </li>
+    <li>
+                    Getting Started
+                
+                    <ul>
+                	                <li>
+				        				            <a href="sessionmanagement.html">Session management</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versioning.html">Versioned calls</a>
+				        				    </li>
+					                <li>
+				        				            <a href="interfaceversioning.html">Interface versioning</a>
+				        				    </li>
+					                <li>
+				        				            <a href="licensing.html">Licensing</a>
+				        				    </li>
+					                <li>
+				        				            <a href="unicode.html">Unicode data</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    <a href="operations.html">Operations</a>
+                
+            </li>
+    <li>
+                    Reference
+                
+                    <ul>
+                	                <li>
+				        				            <a href="datatypes.html">Data types</a>
+				        				    </li>
+					                <li>
+				        				            <a href="requestheaders.html">Request headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="responseheaders.html">Response headers</a>
+				        				    </li>
+					                <li>
+				        				            <a href="errors.html">Errors</a>
+				        				    </li>
+					                <li>
+				        				            <a href="scopes.html">Scopes</a>
+				        				    </li>
+				            </ul>
+            </li>
+    <li>
+                    History
+                
+                    <ul>
+                	                <li>
+				        				            <a href="changelog.html">Changelog</a>
+				        				    </li>
+					                <li>
+				        				            <a href="versionlookup.html">Version lookup</a>
+				        				    </li>
+				            </ul>
+            </li>
+		        </ul>
+		    </div>
+	        <div id="content">
+	            <h1>Request headers</h1>
+
+<p>
+This is a list of common request headers that apply to all calls within Integration Server.
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Header</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Authorization</td>
+            <td>User credentials represented by base-64 encoding that includes the user name and password separated by a colon (for example, base64("user1:pass1")). In order to establish a session, you must provide credentials using the Authorization header or provide X-IntegrationServer-Username with X-IntegrationServer-Password.</td>
+        </tr>
+        <tr>
+            <td>X-IntegrationServer-Username</td>
+            <td>The user name of the ImageNow user. Only required when establishing a session and the Authorization header isn't used.</td>
+        </tr>
+        <tr>
+            <td>X-IntegrationServer-Password</td>
+            <td>The password for the ImageNow user. Only required when establishing a session and the Authorization header isn't used.</td>
+        </tr>
+        <tr>
+            <td>X-IntegrationServer-Session-Hash</td>
+            <td>The session hash representing the session with ImageNow Server. The session hash should be maintained and re-used for all calls that are part of a user's session. <a href="sessionmanagement.html">More information about session management</a></td>
+        </tr>
+        <tr>
+            <td>X-IntegrationServer-Extender-Type</td>
+            <td>The license number that identifies the type of license for the transaction. <a href="licensing.html">More information about licensing</a></td>
+        </tr>
+        <tr>
+            <td>X-IntegrationServer-Client-Hostname</td>
+            <td>The hostname to associate with the Perceptive Content session. This value is automatically determined based on the client that sends the request. If requests originate from a single host this value should be explicitly set to a discrete value for each user's session.</td>
+        </tr>
+        	        <tr>
+	            <td>X-IntegrationServer-Encode-Headers</td>
+	            <td>Must be provided if Unicode data is required for request and response headers. <a href="unicode.html">More information about Unicode data</a></td>
+	        </tr>
+	        </tbody>
+</table>	        </div>
+	    </div>
+    </body>
+</html>
